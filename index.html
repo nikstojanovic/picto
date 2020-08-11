@@ -8,10 +8,12 @@
       .car {
         width: 100%;
         height: auto;
-        height: 50px;
-        background-color: rgba(0, 0, 0, 0.5);
       }
-
+      button {
+        background-color: red;
+        color: white;
+        padding: 10px;
+      }
       .overlay,
       .overlay1 {
         display: none;
@@ -20,24 +22,22 @@
         left: 0;
         width: 100%;
         height: auto;
-        height: 50px;
-        background-color: rgba(255, 0, 0, 0.5);
       }
     </style>
   </head>
 
   <body>
-    <div style="max-width: 900px; position: relative;">
-      <img class="car" src="" />
-      <img class="overlay" src="" />
-      <img class="overlay1" src="" />
-    </div>
     <button onclick="toggleOverlay('overlay')">
       Add first damage overlay
     </button>
     <button onclick="toggleOverlay('overlay1')">
       Add second damage overlay
     </button>
+    <div style="max-width: 900px; position: relative;">
+      <img class="car" src="1.jpg" />
+      <img class="overlay" src="Untitled-1.png" />
+      <img class="overlay1" src="Untitled-2.png" />
+    </div>
     <script>
       function toggleOverlay(name) {
         const a = document.querySelector(`.${name}`);
