@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picto SVG</title>
+    <style>
+      polygon:hover {
+        fill: orange;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="459.58px"
+      height="459.58px"
+      viewBox="0 0 459.58 459.58"
+      style="enable-background: new 0 0 459.58 459.58;"
+      xml:space="preserve"
+    >
+      <g>
+        <g>
+          <polygon
+            points="132.836 76.773, 160.021 398.684, 163.070 401.258, 228.868 395.703, 239.920 387.811, 259.678 342.948, 258.957 328.846, 222.137 264.035, 220.959 249.751, 244.338 186.243, 243.718 171.674, 198.936 75.809, 187.716 69.314, 135.403 73.730, 132.836 76.773"
+            stroke="black"
+            fill="white"
+            onclick="clickHandler(event)"
+          />
+          <polygon
+            points="278.869 345.279, 267.494 375.859, 266.377 386.136, 275.924 389.213, 353.784 391.184, 356.683 388.437, 364.899 65.478, 362.142 62.594, 271.337 60.279, 261.141 61.757, 260.730 71.111, 283.347 162.687, 281.524 177.327, 243.180 249.104, 243.078 263.099, 278.005 330.865, 278.869 345.279"
+            stroke="black"
+            fill="white"
+            onclick="clickHandler(event)"
+          />
+        </g>
+      </g>
+    </svg>
+    <script>
+      function clickHandler(event) {
+        event.target.style.fill === "red"
+          ? (event.target.style.fill = "white")
+          : (event.target.style.fill = "red");
+        event.target.style.stroke === "red"
+          ? (event.target.style.stroke = "black")
+          : (event.target.style.stroke = "red");
+      }
+    </script>
+  </body>
+</html>
