@@ -10,12 +10,16 @@
         height: auto;
       }
       button {
+        display: inline-block;
         background-color: red;
         color: white;
         padding: 10px;
       }
       .overlay,
-      .overlay1 {
+      .overlay1,
+      .overlay2,
+      .overlay3,
+      .overlay4 {
         display: none;
         position: absolute;
         top: 0;
@@ -28,15 +32,27 @@
 
   <body>
     <button onclick="toggleOverlay('overlay')">
-      Add first damage overlay
+      LEFT
     </button>
     <button onclick="toggleOverlay('overlay1')">
-      Add second damage overlay
+      RIGHT
+    </button>
+    <button onclick="toggleOverlay('overlay2')">
+      INNER
+    </button>
+    <button onclick="toggleOverlay('overlay3')">
+      REAR
+    </button>
+    <button onclick="toggleOverlay('overlay4')">
+      FRONT
     </button>
     <div style="max-width: 900px; position: relative;">
-      <img class="car" src="1.jpg" />
-      <img class="overlay" src="Untitled-1.png" />
-      <img class="overlay1" src="Untitled-2.png" />
+      <img class="car" src="images/base.png" />
+      <img class="overlay" src="images/left.png" />
+      <img class="overlay1" src="images/right.png" />
+      <img class="overlay2" src="images/inner.png" />
+      <img class="overlay3" src="images/rear.png" />
+      <img class="overlay4" src="images/front.png" />
     </div>
     <script>
       function toggleOverlay(name) {
