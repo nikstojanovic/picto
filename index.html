@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .car {
+        width: 100%;
+        height: auto;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .overlay {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        height: 50px;
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="max-width: 900px; position: relative;">
+      <img class="car" src="" />
+      <img class="overlay" src="" />
+    </div>
+    <button onclick="toggleOverlay()">Toggle overlay</button>
+    <script>
+      function toggleOverlay() {
+        const a = document.querySelector(".overlay");
+
+        if ((a.style.display = "none")) {
+          return (a.style.display = "block");
+        }
+        a.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
