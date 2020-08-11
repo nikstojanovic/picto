@@ -12,9 +12,12 @@
         background-color: rgba(0, 0, 0, 0.5);
       }
 
-      .overlay {
+      .overlay,
+      .overlay1 {
         display: none;
         position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: auto;
         height: 50px;
@@ -27,16 +30,23 @@
     <div style="max-width: 900px; position: relative;">
       <img class="car" src="" />
       <img class="overlay" src="" />
+      <img class="overlay1" src="" />
     </div>
-    <button onclick="toggleOverlay()">Toggle overlay</button>
+    <button onclick="toggleOverlay('overlay')">
+      Add first damage overlay
+    </button>
+    <button onclick="toggleOverlay('overlay1')">
+      Add second damage overlay
+    </button>
     <script>
-      function toggleOverlay() {
-        const a = document.querySelector(".overlay");
+      function toggleOverlay(name) {
+        const a = document.querySelector(`.${name}`);
 
-        if ((a.style.display = "none")) {
-          return (a.style.display = "block");
+        if (a.style.display === "none") {
+          a.style.display = "block";
+        } else {
+          a.style.display = "none";
         }
-        a.style.display = "none";
       }
     </script>
   </body>
