@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Picto SVG</title>
-    <style>
-      polygon:hover {
-        fill: orange;
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
     <svg
@@ -28,6 +22,20 @@
       <g>
         <g>
           <polygon
+            points="100,10 40,198 190,78 10,78 160,198"
+            stroke="black"
+            fill="white"
+            class="isti"
+            onclick="clickHandler(event)"
+          />
+          <polygon
+            points="300,210 240,398 390,278 210,278 360,398"
+            stroke="black"
+            fill="white"
+            class="isti"
+            onclick="clickHandler(event)"
+          />
+          <polygon
             points="132.836 76.773, 160.021 398.684, 163.070 401.258, 228.868 395.703, 239.920 387.811, 259.678 342.948, 258.957 328.846, 222.137 264.035, 220.959 249.751, 244.338 186.243, 243.718 171.674, 198.936 75.809, 187.716 69.314, 135.403 73.730, 132.836 76.773"
             stroke="black"
             fill="white"
@@ -44,12 +52,20 @@
     </svg>
     <script>
       function clickHandler(event) {
-        event.target.style.fill === "red"
-          ? (event.target.style.fill = "white")
-          : (event.target.style.fill = "red");
-        event.target.style.stroke === "red"
-          ? (event.target.style.stroke = "black")
-          : (event.target.style.stroke = "red");
+        if (event.target.classList.contains("isti")) {
+          const isti = document.querySelectorAll(".isti");
+          isti.forEach((el) => changeColor(el));
+        } else {
+          changeColor(event.target);
+        }
+      }
+      function changeColor(element) {
+        element.style.fill === "red"
+          ? (element.style.fill = "white")
+          : (element.style.fill = "red");
+        element.style.stroke === "red"
+          ? (element.style.stroke = "black")
+          : (element.style.stroke = "red");
       }
     </script>
   </body>
